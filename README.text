@@ -4,10 +4,17 @@ It shows the number of push, arrow, shush for the article (which you feed in by 
 How to use?
 
 1. Copy the clone URL in HTTPS, SSH, or Subversion.
+
 2. Open your terminal.
+
 3. Check the version of Python, in a 3.x version, switch to 2.7.X ( python2 series )
+
 4. Install pip ( include by default in 2.7.9 or later). pip document: https://pip.pypa.io/en/latest/installing.html
+
 5. Use pip to install latest requests package. Command is here: pip install requests
+
 6. Use pip to install latest beautifulsoup4 package. Command is here: pip install beautifulsoup4
-7. Type in: python pttPushArrowShush.py
-8. Enjoy this easy tool =)
+
+7. Run the crawler. Command is here: python pttPushArrowShush.py
+
+8. Have fun =)
