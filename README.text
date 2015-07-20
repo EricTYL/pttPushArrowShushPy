@@ -9,6 +9,8 @@ How to use?
    Command is here: git clone https://github.com/RickyTYL/pttPushArrowShushPy.git
 
 3. Check the version of Python, in a 3.x version, switch to 2.7.X ( python2 series )
+   How to check? Command is here: python --version
+   How to run python 2.7.x ? Command is here: alias python=/usr/local/bin/python2.7
 
 4. Install pip ( include by default in 2.7.9 or later). 
    pip document: https://pip.pypa.io/en/latest/installing.html
