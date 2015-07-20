@@ -1,0 +1,2 @@
+This is an easy PTT crawler writing in Python 2.7.6.
+It shows the number of push, arrow, shush for the article (which you feed in by url).
