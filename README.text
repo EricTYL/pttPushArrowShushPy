@@ -14,7 +14,7 @@ How to use?
    Still have problem? Google it.
    http://stackoverflow.com/questions/5846167/how-to-change-default-python-version
 
-4. Install pip ( include by default in 2.7.9 or later). 
+4. Install pip ( include by default in Python 2.7.9 or later). 
    pip document: https://pip.pypa.io/en/latest/installing.html
 
 5. Use pip to install latest requests package. 

@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 url = raw_input("Please enter the PTT article's url: ")
 print "This is what you type in: ", url
 
-def pttUrlIsInvalid( uRL ):
+def pttUrlIsInvalid( URL ):
 
     # Initializes vars.
     protocol = "Null"
@@ -25,10 +25,9 @@ def pttUrlIsInvalid( uRL ):
     bbs      = "NULL"
     pttClass = "NULL"
     article  = "NULL"
-    URL = uRL
-    listlen = 0
-    i       = 0
-    
+    listlen  = 0
+    i        = 0
+
     if re.search("^[efhlnpst]{3,6}://", URL) != None:
         temptext = URL.split("://")
         protocol = temptext[0]
@@ -65,14 +64,13 @@ def pttUrlIsInvalid( uRL ):
     return (( hostName != "www.ptt.cc" ) | ( bbs != "bbs" ) | ( re.search("^index", article ) != None ))
 
 while pttUrlIsInvalid(url):
-    print "In invalid while."
     url = raw_input("The url is invalid, please give me a PTT article's url: ")
     print "This is what you type in: ", url
 
 res = requests.get(url)
 soup = BeautifulSoup(res.text, "html.parser")
 
-push_num = 0
+push_num  = 0
 arrow_num = 0
 shush_num = 0
 
