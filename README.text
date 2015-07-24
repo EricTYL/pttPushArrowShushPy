@@ -13,11 +13,11 @@ As python is an interpreted language, it's NECESSARY to make sure we have same e
 
 THE FOLLOWING PYTHON PACKAGES ARE REQUIRED:
 
-  1. requests (2.7.0 or above)
-  2. beautifulsoup4 (4.4.0 or above)
-  3. ndg-httpsclient (0.4.0 or above)
-  4. pyasn1 (0.1.8 or above)
-  5. pyOpenSSL (0.13.1 or above. But OSX Yosemite 0.13.x only.)
+  1. requests (2.7.0 or later)
+  2. beautifulsoup4 (4.4.0 or later)
+  3. ndg-httpsclient (0.4.0 or later)
+  4. pyasn1 (0.1.8 or later)
+  5. pyOpenSSL (0.13.1 or later. But OSX Yosemite 0.13.x only.)
 
 
 
@@ -28,27 +28,27 @@ How to use this?
 
 1. Copy the clone URL in HTTPS, SSH, or Subversion.
 
-2. Open your terminal, and clone this repository. 
+2. Open your terminal, and clone this repository.
    Command is here: git clone https://github.com/RickyTYL/pttPushArrowShushPy.git
 
 3. Check the version of Python, in a 3.x version, switch to 2.7.X ( python2 series )
-   How to check? Command is here: python --version
-   How to run python 2.7.x ? Command is here: alias python=/usr/local/bin/python2.7
+   Command is here: python --version
+   Command is here: alias python=/usr/local/bin/python2.7
    Still have problem? Google it.
    http://stackoverflow.com/questions/5846167/how-to-change-default-python-version
 
-4. Install pip ( include by default in Python 2.7.9 or later). 
+4. Install pip ( include by default in Python 2.7.9 or later ).
    pip document: https://pip.pypa.io/en/latest/installing.html
 
-5. Use pip to check what you have.
+5. Use pip to check what you have. ( For new user, you missed all in Part B. )
    Command is here: pip list
 
-6. Use pip to install packages what you missed above( Compare Step.5 & Part B ).
+6. Use pip to install packages what you missed ( Compare Step.5 & Part B ).
    Command is here: pip install FILL_IN_WHAT_YOU_MISSED
-   FILL_IN_WHAT_YOU_MISSED should be replaced to those packages you don't have.
+   FILL_IN_WHAT_YOU_MISSED should be replaced by those packages you don't have.
    For example: pip install requests
 
-7. Run the crawler. 
+7. Run the crawler.
    Command is here: python pttPushArrowShush.py
 
 8. Have fun =)
