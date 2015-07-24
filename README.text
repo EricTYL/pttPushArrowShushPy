@@ -1,7 +1,30 @@
+Part A: Introductcion
+
 This is an easy PTT crawler writing in Python 2.7.6.
 It shows the number of push, arrow, shush for the article (which you feed in by url).
 
-How to use?
+
+
+
+
+Part B: Requirement
+
+As python is an interpreted language, it's NECESSARY to make sure we have same enviroment.
+
+THE FOLLOWING PYTHON PACKAGES ARE REQUIRED:
+
+  1. requests (2.7.0 or above)
+  2. beautifulsoup4 (4.4.0 or above)
+  3. ndg-httpsclient (0.4.0 or above)
+  4. pyasn1 (0.1.8 or above)
+  5. pyOpenSSL (0.13.1 or above. But OSX Yosemite 0.13.x only.)
+
+
+
+
+Part C: Running the crawler
+
+How to use this?
 
 1. Copy the clone URL in HTTPS, SSH, or Subversion.
 
@@ -17,11 +40,13 @@ How to use?
 4. Install pip ( include by default in Python 2.7.9 or later). 
    pip document: https://pip.pypa.io/en/latest/installing.html
 
-5. Use pip to install latest requests package. 
-   Command is here: pip install requests
+5. Use pip to check what you have.
+   Command is here: pip list
 
-6. Use pip to install latest beautifulsoup4 package. 
-   Command is here: pip install beautifulsoup4
+6. Use pip to install packages what you missed above( Compare Step.5 & Part B ).
+   Command is here: pip install FILL_IN_WHAT_YOU_MISSED
+   FILL_IN_WHAT_YOU_MISSED should be replaced to those packages you don't have.
+   For example: pip install requests
 
 7. Run the crawler. 
    Command is here: python pttPushArrowShush.py
