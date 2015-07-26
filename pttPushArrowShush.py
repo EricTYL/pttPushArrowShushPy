@@ -8,8 +8,9 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
+print " "
 url = raw_input("Please enter the PTT article's url: ")
-print "This is what you type in: ", url
+#print "This is what you type in: ", url
 
 def pttUrlIsInvalid( URL ):
 
@@ -63,7 +64,7 @@ def pttUrlIsInvalid( URL ):
 
 while pttUrlIsInvalid(url):
     url = raw_input("The url is invalid, please give me a PTT article's url: ")
-    print "This is what you type in: ", url
+#    print "This is what you type in: ", url
 
 
 
@@ -74,6 +75,20 @@ if re.search("^www", url)!=None:
 
 res = requests.get(url)
 soup = BeautifulSoup(res.text, "html.parser")
+
+# Recrawls article when getting over 18 message.
+if soup.select('.over18-notice'):
+#    print type(url), url
+    payload = {
+            'from':url,
+            'yes':'yes'
+            }
+    rs = requests.session()
+    res = rs.post('https://www.ptt.cc/ask/over18', verify=False, data=payload)
+    res = rs.get(url, verify=False)
+    soup = BeautifulSoup(res.text, "html.parser")
+
+
 
 push_num  = 0
 arrow_num = 0
@@ -88,4 +103,4 @@ for entry in soup.select('.push'):
     else:
         arrow_num += 1
 
-print "push: ", push_num, "\n", "arrow: ", arrow_num, "\n", "shush: ", shush_num, "\n"
+print "\n", "push:  ", push_num, "\n", "arrow: ", arrow_num, "\n", "shush: ", shush_num, "\n"
